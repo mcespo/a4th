@@ -65,3 +65,12 @@ a {
 
   }
 }
+
+// override for home page title
+.home {
+  .main-content-full-width {
+    .entry-title {
+      display: none;
+    }
+  }
+}
