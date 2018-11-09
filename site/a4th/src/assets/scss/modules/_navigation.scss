@@ -1,0 +1,127 @@
+// Navigation breakpoints
+.mobile-menu,
+.site-title-bar {
+  @include hide-for(medium);
+}
+
+.desktop-menu,
+.site-navigation .top-bar-left {
+  @include show-for(medium);
+}
+
+// Site title
+.site-desktop-title a {
+  display: grid;
+  margin-left: 0.75em;
+  width: 50px;
+}
+
+// Mobile menu
+.mobile-menu {
+  display: none; // prevents repaint caused by JS hiding menu onload
+}
+
+.off-canvas {
+  > ul.menu {
+    height: 100vh;
+    padding: 1rem;
+
+    a {
+      color: $orange;
+      font-weight: 600;
+      font-size: rem-calc(15);
+    }
+  }
+
+  .menu .active > a {
+    background-color: #ccc;
+  }
+
+}
+
+.title-bar-title {
+  a {
+    font-size: 1rem;
+    color: $orange;
+  }
+}
+
+.mobile-menu,
+.mobile-off-canvas-menu {
+
+  .menu .is-active > a {
+    background-color: lighten($dark-nav-color, 5%);
+  }
+}
+
+// Tablet and desktop menu
+
+.top-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .header-logo {
+    max-width: 2.5em;
+  }
+
+  .menu a {
+    color: $orange;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 0.8rem;
+    line-height: 1;
+
+    &:hover:not(.button) {
+      background-color: $light-gray;
+    }
+  }
+
+  .menu .active > a {
+    background-color: #ccc;
+  }
+
+  .menu > li:not(.menu-text) > a {
+    color: $orange;
+    padding: 1.6rem 0.75rem;
+  }
+
+  .dropdown.menu .submenu {
+    border: 0;
+  }
+
+  .dropdown.menu .has-submenu.is-down-arrow a {
+    padding-right: 1rem;
+  }
+
+  .dropdown.menu .has-submenu.is-down-arrow > a::after {
+    border: 0;
+  }
+
+  .dropdown.menu:first-child > li.is-dropdown-submenu-parent > a::after {
+    display: none;
+  }
+}
+
+.site-navigation {
+  @include breakpoint(medium only) {
+    padding: 0; // prevents container visibility on small screens
+  }
+}
+
+// WP post navigation
+.site-header {
+  background-color: $white;
+  border-bottom: 1px solid $medium-gray;
+}
+
+.post-navigation {
+  @include clearfix;
+}
+
+.nav-previous {
+  float: left;
+}
+
+.nav-next {
+  float: right;
+}
