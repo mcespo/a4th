@@ -1,13 +1,13 @@
 {
-    "name": "olefredrik/foundationpress",
-    "description": "FoundationPress is a WordPress starter theme based on Foundation 6 by Zurb",
+    "name": "Marvin Cespedes",
+    "description": "Forked from FoundationPress, a WordPress starter theme based on Foundation 6 by Zurb",
     "type": "wordpress-theme",
     "minimum-stability" : "dev",
     "license": "MIT",
     "authors": [
         {
-            "name": "Ole Fredrik Lie",
-            "email": "mail@olefredrik.com"
+            "name": "Marvin Cespedes",
+            "email": "mcespo@gmail.com"
         }
     ],
     "require": {

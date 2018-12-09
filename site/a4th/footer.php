@@ -12,7 +12,8 @@
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-grid">
-            <?php dynamic_sidebar( 'footer-widgets' ); ?>
+            <p>Copyright &copy; <?php echo date("Y"); ?>, Artists for the Humanities</p>
+            <!-- <?php dynamic_sidebar( 'footer-widgets' ); ?> -->
         </div>
     </div>
 </footer>

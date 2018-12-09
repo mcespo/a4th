@@ -2,7 +2,6 @@ a {
   color: $orange;
   text-decoration: underline;
 }
-
 .main-container {
   @include xy-grid-container;
 }
@@ -51,26 +50,27 @@ a {
     }
 
     @include breakpoint(medium) {
-      @include xy-cell(3);
+      @include xy-cell(4);
       margin-top: 1rem;
     }
 
     ul {
       margin: 0;
+
       li {
         list-style-type: none;
         font-size: 0.8em;
       }
     }
 
-  }
-}
-
-// override for home page title
-.home {
-  .main-content-full-width {
-    .entry-title {
-      display: none;
     }
-  }
-}
+    }
+
+    // override for home page title
+    .home {
+      .main-content-full-width {
+        .entry-title {
+          display: none;
+        }
+      }
+    }

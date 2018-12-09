@@ -11,7 +11,7 @@
 
 // Site title
 .site-desktop-title a {
-  display: grid;
+  font-weight: bold;
   margin-left: 0.75em;
   width: 50px;
 }
@@ -33,9 +33,7 @@
     }
   }
 
-  .menu .active > a {
-    background-color: #ccc;
-  }
+  .menu .active > a { background-color: #ccc; }
 
 }
 
@@ -66,9 +64,9 @@
 
   .menu a {
     color: $orange;
-    font-weight: bold;
     padding-top: 0;
     padding-bottom: 0;
+    font-weight: bold;
     font-size: 0.8rem;
     line-height: 1;
 
@@ -77,30 +75,30 @@
     }
   }
 
-  .menu .active > a {
-    background-color: #ccc;
-  }
+.menu .active>a {
+  background-color: #ccc;
+}
 
-  .menu > li:not(.menu-text) > a {
-    color: $orange;
-    padding: 1.6rem 0.75rem;
-  }
+.menu>li:not(.menu-text)>a {
+  color: $orange;
+  padding: 1.6rem 0.75rem;
+}
 
-  .dropdown.menu .submenu {
-    border: 0;
-  }
+.dropdown.menu .submenu {
+  border: 0;
+}
 
-  .dropdown.menu .has-submenu.is-down-arrow a {
-    padding-right: 1rem;
-  }
+.dropdown.menu .has-submenu.is-down-arrow a {
+  padding-right: 1rem;
+}
 
-  .dropdown.menu .has-submenu.is-down-arrow > a::after {
-    border: 0;
-  }
+.dropdown.menu .has-submenu.is-down-arrow>a::after {
+  border: 0;
+}
 
-  .dropdown.menu:first-child > li.is-dropdown-submenu-parent > a::after {
-    display: none;
-  }
+.dropdown.menu:first-child>li.is-dropdown-submenu-parent>a::after {
+  display: none;
+}
 }
 
 .site-navigation {
@@ -111,10 +109,9 @@
 
 // WP post navigation
 .site-header {
-  background-color: $white;
-  border-bottom: 1px solid $medium-gray;
+background-color: $white;
+border-bottom: 1px solid $medium-gray;
 }
-
 .post-navigation {
   @include clearfix;
 }
@@ -132,11 +129,12 @@
   .menu-icon {
     &::after {
       background: $orange;
-      box-shadow:0 7px 0 $orange, 0 14px 0 $orange;
+      box-shadow: 0 7px 0 $orange, 0 14px 0 $orange;
     }
+
     &:hover::after {
       background: $orange-light;
-      box-shadow:0 7px 0 $orange-light, 0 14px 0 $orange-light;
+      box-shadow: 0 7px 0 $orange-light, 0 14px 0 $orange-light;
     }
   }
 }
