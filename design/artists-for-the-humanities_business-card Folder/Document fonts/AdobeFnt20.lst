@@ -1,0 +1,49 @@
+%!Adobe-FontList 1.20
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Lora-Bold
+FamilyName:Lora
+StyleName:Bold
+MenuName:Lora
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Lora Bold
+WritingScript:Roman
+OutlineFileName:/Users/mcespedes/webpo/mcespo/professional/a4th.org/a4th/design/artists-for-the-humanities_business-card Folder/Document fonts/Lora-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:201580
+FileModTime:331624800
+NameArray:0,Mac,4,Lora Bold
+NameArray:0,Win,1,Lora
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Lora-Regular
+FamilyName:Lora
+StyleName:Regular
+MenuName:Lora
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Lora Regular
+WritingScript:Roman
+OutlineFileName:/Users/mcespedes/webpo/mcespo/professional/a4th.org/a4th/design/artists-for-the-humanities_business-card Folder/Document fonts/Lora-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:182152
+FileModTime:331624800
+NameArray:0,Mac,4,Lora Regular
+NameArray:0,Win,1,Lora
+%EndFont
+

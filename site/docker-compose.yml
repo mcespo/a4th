@@ -1,8 +1,8 @@
-version: '3'
+version: '3.1'
 
 services:
   db:
-    image: mysql:latest
+    image: mysql:5.7
     command: [
         '--default_authentication_plugin=mysql_native_password',
         '--character-set-server=utf8mb4',
@@ -26,7 +26,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
 
   wordpress:
-    image: wordpress:latest
+    image: wordpress
     ports:
       - '5010:80' # change if you wish
     volumes:
