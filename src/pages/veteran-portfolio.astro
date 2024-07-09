@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import vetPortrait01 from '../assets/albums/veteran-portfolio-portrait-1.jpg';
+import vetPortrait02 from '../assets/albums/veteran-portfolio-portrait-2.jpg';
+import vetPortrait03 from '../assets/albums/veteran-portfolio-portrait-3.jpg';
+import vetPortrait04 from '../assets/albums/veteran-portfolio-portrait-4.jpg';
+import vetPortrait05 from '../assets/albums/veteran-portfolio-portrait-5.jpg';
+import vetPortrait06 from '../assets/albums/veteran-portfolio-portrait-6.jpg';
+import vetPortrait07 from '../assets/albums/veteran-portfolio-portrait-7.jpg';
+import vetPortrait08 from '../assets/albums/veteran-portfolio-portrait-8.jpg';
+import vetPortrait09 from '../assets/albums/veteran-portfolio-portrait-9.jpg';
+import vetPortrait10 from '../assets/albums/veteran-portfolio-portrait-10.jpg';
+import vetPortrait11 from '../assets/albums/veteran-portfolio-portrait-11.jpg';
+import vetPortrait12 from '../assets/albums/veteran-portfolio-portrait-12.jpg';
+import vetPortrait13 from '../assets/albums/veteran-portfolio-portrait-13.jpg';
+import vetPortrait14 from '../assets/albums/veteran-portfolio-portrait-14.jpg';
+import vetPortrait15 from '../assets/albums/veteran-portfolio-portrait-15.jpg';
+import vetPortrait16 from '../assets/albums/veteran-portfolio-portrait-16.jpg';
+import vetPortrait17 from '../assets/albums/veteran-portfolio-portrait-17.jpg';
+import vetPortrait18 from '../assets/albums/veteran-portfolio-portrait-18.jpg';
+import vetPortrait19 from '../assets/albums/veteran-portfolio-portrait-19.jpg';
+import vetPortrait20 from '../assets/albums/veteran-portfolio-portrait-20.jpg';
+import vetPortrait21 from '../assets/albums/veteran-portfolio-portrait-21.jpg';
+import vetPortrait22 from '../assets/albums/veteran-portfolio-portrait-22.jpg';
+import vetPortrait23 from '../assets/albums/veteran-portfolio-portrait-23.jpg';
+
+const images = [
+	{ src: vetPortrait01, alt: ''},
+	{ src: vetPortrait02, alt: ''},
+	{ src: vetPortrait03, alt: ''},
+	{ src: vetPortrait04, alt: ''},
+	{ src: vetPortrait05, alt: ''},
+	{ src: vetPortrait06, alt: ''},
+	{ src: vetPortrait07, alt: ''},
+	{ src: vetPortrait08, alt: ''},
+	{ src: vetPortrait09, alt: ''},
+	{ src: vetPortrait10, alt: ''},
+	{ src: vetPortrait11, alt: ''},
+	{ src: vetPortrait12, alt: ''},
+	{ src: vetPortrait13, alt: ''},
+	{ src: vetPortrait14, alt: ''},
+	{ src: vetPortrait15, alt: ''},
+	{ src: vetPortrait16, alt: ''},
+	{ src: vetPortrait17, alt: ''},
+	{ src: vetPortrait18, alt: ''},
+	{ src: vetPortrait19, alt: ''},
+	{ src: vetPortrait20, alt: ''},
+	{ src: vetPortrait21, alt: ''},
+	{ src: vetPortrait22, alt: ''},
+	{ src: vetPortrait23, alt: ''},
+]
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<h1>Welcome to <span class="text-gradient">RETURN AND RECOVERY</span></h1>
+		<p class="instructions">
+			To get started, open the directory <code>src/pages</code> in your project.<br />
+			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+		</p>
+		<div class="swiper-container text-black">
+			<div class="swiper main">
+				<div class="swiper-wrapper">
+					{images.map((image) => (
+						<div class="swiper-slide"><Image src={image.src} alt={image.alt} class="" /></div>
+					))}
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div class="swiper thumbs">
+				<div class="swiper-wrapper">
+					{images.map((image) => (
+						<div class="swiper-slide"><Image src={image.src} alt={image.alt} class="" /></div>
+					))}
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>
+<script src="../libs/swiper.js"></script>
