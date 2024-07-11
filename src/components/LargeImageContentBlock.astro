@@ -1,0 +1,38 @@
+---
+interface Props {
+  order: string;
+  title: string;
+}
+
+const { order = "lg:order-first", title = "" } = Astro.props;
+---
+
+<div class="relative bg-white">
+  <div
+    class="mx-auto max-w-7xl lg:flex lg:justify-between xl:justify-end"
+  >
+    <div
+      class={`${order} lg:flex mt-4 lg:mt-0 lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2`}
+    >
+      <div class="relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0">
+        <slot name="image" />
+      </div>
+    </div>
+    <div class="px-6 lg:contents">
+      <div
+        class="mx-auto max-w-2xl pb-12 pt-16 lg:mx-8 lg:w-full lg:max-w-lg lg:flex-none lg:pt-12 xl:w-1/2"
+      >
+        <h1
+          class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+        >
+          {title}
+        </h1>
+        <div
+          class="mt-8 max-w-prose text-base leading-7 text-gray-700 lg:max-w-none"
+        >
+          <slot />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
