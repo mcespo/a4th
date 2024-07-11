@@ -1,61 +1,60 @@
 ---
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
-
-const { href, title, body } = Astro.props;
+const year = new Date().getFullYear();
+import artistsForTheHumanitiesLogo from './../svgs/artists-for-the-humanities-logo_white.svg?raw';
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-</style>
+<footer class="bg-gray-900" aria-labelledby="footer-heading">
+	<h2 id="footer-heading" class="sr-only">Footer</h2>
+	<div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+	  <div class="xl:grid xl:grid-cols-[1fr_2fr] xl:gap-8">
+		<div class="space-y-8 w-80">
+			<Fragment set:html={ artistsForTheHumanitiesLogo } />
+		</div>
+		<div class="mt-16 grid grid-cols-1 gap-8 xl:mt-0">
+		  <div class="md:grid md:grid-cols-3 md:gap-8">
+			<div>
+			  <h3 class="text-sm font-semibold leading-6 text-white">Artists for the Humanities</h3>
+			  <ul role="list" class="mt-6 space-y-4">
+				<li class="text-sm leading-6 text-white">
+					621 North Lawe St.<br />
+					Appleton, WI 54911-53712<br />
+					Office: (920) 915-5595
+				</li>
+			  </ul>
+			</div>
+			<div class="mt-10 md:mt-0">
+			  <h3 class="text-sm font-semibold leading-6 text-white">Quicklinks</h3>
+			  <ul role="list" class="mt-6 space-y-4">
+				<li>
+				  <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Home</a>
+				</li>
+				<li>
+				  <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Return & Recovery</a>
+				</li>
+				<li>
+				  <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Veteran Portraits</a>
+				</li>
+				<li>
+				  <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Supporters</a>
+				</li>
+				<li>
+					<a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Contact Us</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="mt-10 md:mt-0">
+				<h3 class="text-sm font-semibold leading-6 text-white">Donate</h3>
+				<ul role="list" class="mt-6 space-y-4">
+					<li>
+						<form style="width: 150px;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick"> <input name="hosted_button_id" type="hidden" value="G32K3LGBRBSSY"> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image"> <img loading="lazy" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0"></form>
+					</li>
+				</ul>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+		<p class="text-xs leading-5 text-gray-400">&copy; {year}, Artists for the Humanities</p>
+	  </div>
+	</div>
+  </footer>

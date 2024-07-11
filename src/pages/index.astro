@@ -3,33 +3,34 @@ import Layout from '../layouts/Layout.astro';
 import LargeHero from '../components/LargeHero.astro';
 import ImageContentBlock from '../components/ImageContentBlock.astro';
 import { Image } from 'astro:assets';
+import ptsd from '../assets/DSC_7051-RZ-1024px-EDIT-1.jpg';
 import silenceImg from '../assets/silence.jpg';
+import meeting from '../assets/20240111_141909-1-scaled.jpg';
+import hartwig from '../assets/SSG-HARTWIG.jpg';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to Artists for the Humanities">
 	<LargeHero />
-	<main>
-		<h1>Welcome to </h1>
+	<main class="grid grid-flow-row px-4 mx-auto w-full xl:max-w-screen-2xl">
 		<ImageContentBlock order='lg:order-first' title='OUR MISSION'>
-			<Image slot="image" src={silenceImg} alt="" class="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0" />
+			<Image slot="image" src={ptsd} alt="" class="object-cover rounded-3xl shadow-2xl" />
 			<p>The mission of A4TH is to improve the quality of the lives of Wisconsin veterans who have been negatively impacted by trauma, substance abuse, mental health issues, and homelessness, whether from military service or other significant life events. We do this through conducting group sessions of expressive art therapy coupled with mental health guidance, life coaching, fellowship, and positive behavioral skills.</p>
 		</ImageContentBlock>
 		<ImageContentBlock order='lg:order-last' title='HISTORY'>
-			<Image slot="image" src={silenceImg} alt="" class="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0" />
+			<Image slot="image" src={hartwig} alt="" class="object-cover rounded-3xl shadow-2xl" />
 			<p>In 2003 Tim Mayer began painting portraits of U.S. Military Service personnel who had lost their lives in Iraq, Afghanistan, and the Middle East—honoring those who have made the supreme sacrifice in service to our country. The creation of the portraits became known as the Fallen Soldiers Project.</p>
 			<p>In 2005 Mr. Mayer formed the non-profit Artists for the Humanities (A4TH). It was incorporated in 2007 and, in 2009, received its IRS 501(c) (3) status.</p>
 			<p>In June 2009, Mr. Mayer transitioned A4TH services, creating an expressive art mental health guidance and life coaching program. Based on discovering some unmet needs of U.S. military personnel returning from military service with an array of mental health conditions affecting their reintegration into civilian life. The Return & Recovery Program for Military Veterans (RRPMV) was initiated. This program was designed to assist veterans and their families, providing assistance for returning veterans with a wide range of mental health and behavioral needs and conditions.</p>
 		</ImageContentBlock>
+		<ImageContentBlock order='lg:order-first' title='CURRENT ACTIVITIES'>
+			<Image slot="image" src={meeting} alt="" class="object-cover rounded-3xl shadow-2xl" />
+			<p>The mission of A4TH is to improve the quality of the lives of Wisconsin veterans who have been negatively impacted by trauma, substance abuse, mental health issues, and homelessness, whether from military service or other significant life events. We do this through conducting group sessions of expressive art therapy coupled with mental health guidance, life coaching, fellowship, and positive behavioral skills.</p>
+		</ImageContentBlock>
+		<ImageContentBlock order='lg:order-last' title='PROGRAM GOALS AND OBJECTIVES'>
+			<Image slot="image" src={silenceImg} alt="" class="object-cover rounded-3xl shadow-2xl w-80" />
+			<p>A4TH is entering its eleventh year at Vets Place Central (men) and our sixth year at Boudicca House (women). These facilities are transitional housing for homeless veterans in Milwaukee’s Concordia neighborhood on the city’s west side. A4TH has served over 1,742 Veteran residents at both facilities.</p>
+			<p>Our program continues to be effective in its approach as we continue to adjust and improve our process to help Veterans in these challenging times. Individual successes and breakthroughs come over time with repeated involvement in our program. Many of our participants suffer from substance abuse, a significant contributor to homelessness, which is a symptom of more considerable societal dysfunction. Teaching participants positive coping mechanisms and guiding them into making better lifestyle choices is critical, as is helping those committed to ending substance abuse maintain those positive living practices. Our organization’s accomplishments are reflected in the many veterans who have chosen to live better and happier lives. We continue to be committed to our mission.</p>
+			<p>A4TH is based in Appleton, and our facilitator and executive director, Tim Mayer, travels weekly to Milwaukee to conduct our program sessions.</p>
+		</ImageContentBlock>
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-</style>

@@ -11,5 +11,5 @@ const albums = defineCollection({
 });
 
 export const collections = {
-  'albums': albums,
+  albums: albums,
 };

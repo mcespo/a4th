@@ -1,72 +1,51 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import LargeImageContentBlock from "../components/LargeImageContentBlock.astro";
+import ImageContentBlock from "../components/ImageContentBlock.astro";
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import art from '../assets/DSCF3507-copy.jpg';
+import portrait from '../assets/PIC030-EDIT-1Feb-23-2021.jpg';
+import bunkers from '../assets/Bunkers-between-hootches-2-2-Copy-EDIT-Feb-23-2021.jpg';
+import serve from '../assets/DSCF5303-copy.jpg';
+import CenterContent from "../components/CenterContent.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">RETURN AND RECOVERY</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-	</main>
+  <main class="grid grid-flow-row px-4 mx-auto w-full xl:max-w-screen-2xl">
+    <LargeImageContentBlock order='lg:order-first' title='Return & Recovery Program for Military Veterans'>
+      <Image slot="image" src={portrait} alt="" class="absolute inset-0 h-full w-full bg-gray-50 object-cover" />
+      <p>Artists for the Humanities made the decision to suspend for the duration of the pandemic this very successful veterans program. The program has served over 4,500 veterans from March 2009 to March  2020.  The program has supported veterans throughout the state of Wisconsin – from St. Norbert Abbey in De Pere where our program started to the  Tomah VA Medical Center in Tomah WI.,  to Union Grove, Milwaukee, and Chippewa Falls.  A4TH and, the Return & Recovery Program for Military Veterans have had a positive impact on the lives of the military veterans that we served.   A4TH will re-assess the re-start of this program when the pandemic has subsided and the participating organizations and locations are able to again host the group sessions associated with this program. A4TH wishes to thank all of our funders, volunteers, and especially the veterans and their families that we served.</p>
+    </LargeImageContentBlock>
+    <ImageContentBlock order='lg:order-last' title='Cost Free Service'>
+			<Image slot="image" src={art} alt="" class="object-cover rounded-3xl shadow-2xl" />
+      <p>The Return & Recovery Program for Military Veterans (RRPMV) is a cost-free service offered through Artists for the Humanities that combines expressive art with group counseling to help military veterans and their families:</p>
+      <ul>
+        <li>confront unresolved service-related trauma, grief, substance abuse and homelessness</li>
+        <li>identify how the adverse psychological effects of military service have limited them</li>
+        <li>embrace personal growth to improve their condition</li>
+        <li>successfully reintegrate into civilian life</li>
+        <li>identify emotional distress resulting from trauma</li>
+        <li>address substance abuse as possible self-medicating</li>
+      </ul>
+      <p>In short, we live our vision, which has evolved from our compassionate history of helping veterans. Rehabilitative programs like RRPMV are offered through A4TH at no cost to veterans, military family members or the VA health care providers/facilities.</p>
+      <p>A4TH is here to answer your questions about RRPMV, or our meetings and events. Call or email us today!</p>
+      <p>Artists for the Humanities is a 501(c)(3) charitable non-profit organization. We rely on the generous donations from our supporters to continue funding our programs and ask those who care that our veterans have access to all forms of assistance to please contribute so we can continue to strengthen the lives of our service members.</p>
+      <p>The Return & Recovery Program for Military Veterans (RRPMV), established in June of 2009 by Tim Mayer, Executive Director of Artists for the Humanities, provides a constructive and “safe” environment for military veterans and their families participating in the group sessions where they work and learn how to face unresolved service-related trauma, grief, substance abuse and homelessness.</p>
+      <p>Through an innovative combination of expressive art and group counseling, RRPMV encourages those living with post-traumatic stress disorder (PTSD), traumatic brain injury (TBI), military sexual trauma (MST), and other mental health issues to identify the adverse effects of military service, improve their condition, and successfully reintegrate into civilian life.</p>
+      <p>We are committed to our mission, which has evolved from our compassionate history of helping veterans.</p>
+		</ImageContentBlock>
+    <CenterContent title="What We Do">
+      <Image src={bunkers} alt="" class="object-cover rounded-3xl" />
+      <p>The Return & Recovery Program for Military Veterans provides needed assistance to veterans suffering long-term effects of mental and emotional stress resulting from combat and/or other traumatic experiences. Those with whom we work come from the Vietnam War, the Persian Gulf and post-911 military conflicts.</p>
+      <p>We work directly with the veterans, their families, and organizations in their communities. We work in cooperative and rewarding ways with the Veterans Administration, as well as with veterans’ organizations, churches and other community organizations. In this way, we spread the word on a grassroots level that many veterans and other survivors of trauma need the support from their communities. In the case of veterans, we promote an awareness of the sacrifices of these men and women who gave much in the service to our country. Our fundraising events help inform the communities of the importance of acknowledging and appreciating the service given.</p>
+      <p>Indeed, many Americans are not aware of the sacrifices made by the veterans in their neighborhoods because many veterans are silent about their combat experiences. Just as the wars are in distant lands, so the fighters of these wars are distant people. Even though they are Americans, they live in neighborhoods different than our own and pursue ways of life separate from our own…making the societal feelings of sympathy and concern for the welfare of our combat personnel unknown to those veterans.</p>
+      <p>Our veterans have educated all of us regarding the personal and societal costs of trauma. As a direct result of a growing knowledge about Post-traumatic Stress Disorder, we realize the far reaching effects on veterans and non-veterans as well. We have come to realize that when trauma is not treated, the risk of domestic violence, mental illness, substance abuse, homelessness and suicide greatly increase. Therefore, our efforts to engage community support and financial contributions can demonstrate to participating veterans that their community does care about them.</p>
+      <p>It is a time in which all American citizens have an obligation to become aware of the personal costs to the personnel serving in our military. By means of our programs like the Return & Recovery Program for Military Veterans, A4TH raises public awareness of those who have made the ultimate sacrifice and those currently serving and sacrificing in our theaters of conflict in the Middle East, Iraq and Afghanistan.</p>
+    </CenterContent>
+    <CenterContent title="Who We Serve">
+      <Image src={serve} alt="" class="object-cover rounded-3xl" />
+      <p>The RRPMV provides necessary assistance to veterans suffering long-term effects of mental and emotional stress experienced in combat and other situations. As stated above, we work with veterans who served in Iraq and Afghanistan as well as Vietnam, the Persian Gulf War.</p>
+      <p>We work directly with veterans, their families, the Veterans Administration and community organizations throughout Wisconsin. RRPMV sessions are free to all veterans and their family members. Any veteran who has received a diagnosis of military service-related stress or depression disturbance from a Veterans Administration or other private health care provider can be referred to RRPMV services at the location nearest you.</p>
+    </CenterContent>
+  </main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
