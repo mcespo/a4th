@@ -1,0 +1,109 @@
+---
+interface Props {
+  title: string;
+}
+
+import { Image } from "astro:assets";
+import logo01 from "../assets/supporter-logos/supporter-logo-1.png";
+import logo02 from "../assets/supporter-logos/supporter-logo-2.jpg";
+import logo03 from "../assets/supporter-logos/supporter-logo-3.jpg";
+import logo04 from "../assets/supporter-logos/supporter-logo-4.jpg";
+import logo05 from "../assets/supporter-logos/supporter-logo-5.jpg";
+import logo06 from "../assets/supporter-logos/supporter-logo-6.gif";
+import logo07 from "../assets/supporter-logos/supporter-logo-7.jpg";
+import logo08 from "../assets/supporter-logos/supporter-logo-8.gif";
+import logo09 from "../assets/supporter-logos/supporter-logo-9.jpg";
+import logo10 from "../assets/supporter-logos/supporter-logo-10.jpg";
+import logo11 from "../assets/supporter-logos/supporter-logo-11.jpg";
+import logo12 from "../assets/supporter-logos/supporter-logo-12.gif";
+import logo13 from "../assets/supporter-logos/supporter-logo-13.jpg";
+import logo14 from "../assets/supporter-logos/supporter-logo-14.jpg";
+import logo15 from "../assets/supporter-logos/supporter-logo-15.jpg";
+import logo16 from "../assets/supporter-logos/supporter-logo-16.jpg";
+import logo17 from "../assets/supporter-logos/supporter-logo-17.jpg";
+import logo18 from "../assets/supporter-logos/supporter-logo-18.gif";
+import logo19 from "../assets/supporter-logos/supporter-logo-19.jpg";
+import logo20 from "../assets/supporter-logos/supporter-logo-20.jpg";
+import logo21 from "../assets/supporter-logos/supporter-logo-21.png";
+import logo22 from "../assets/supporter-logos/supporter-logo-22.gif";
+import logo23 from "../assets/supporter-logos/supporter-logo-23.jpg";
+import logo24 from "../assets/supporter-logos/supporter-logo-24.jpg";
+import logo25 from "../assets/supporter-logos/supporter-logo-25.gif";
+import logo26 from "../assets/supporter-logos/supporter-logo-26.png";
+import logo27 from "../assets/supporter-logos/supporter-logo-27.jpg";
+import logo28 from "../assets/supporter-logos/supporter-logo-28.png";
+import logo29 from "../assets/supporter-logos/supporter-logo-29.gif";
+
+const images = [
+  { src: logo01, alt: "Bergstrom logo", title: "Bergstrom" },
+  { src: logo02, alt: "Bemis logo", title: "Bemis" },
+  { src: logo03, alt: "Blick Art Materials logo", title: "Blick Art Materials" },
+  { src: logo04, alt: "Broadway Automotive logo", title: "Broadway Automotive" },
+  { src: logo05, alt: "Cellcom logo", title: "Cellcom" },
+  { src: logo06, alt: "Cornerstone Foundation logo", title: "Cornerstone Foundation" },
+  { src: logo07, alt: "DAV logo", title: "DAV" },
+  { src: logo08, alt: "Desert Veterans Wisconsin logo", title: "Desert Veterans Wisconsin" },
+  { src: logo09, alt: "Franciscan Spirituality Center logo", title: "Franciscan Spirituality Center" },
+  { src: logo10, alt: "", title: "Blick" },
+  { src: logo11, alt: "", title: "Blick" },
+  { src: logo12, alt: "", title: "Blick" },
+  { src: logo13, alt: "", title: "Blick" },
+  { src: logo14, alt: "", title: "Blick" },
+  { src: logo15, alt: "", title: "Blick" },
+  { src: logo16, alt: "", title: "Blick" },
+  { src: logo17, alt: "", title: "Blick" },
+  { src: logo18, alt: "", title: "Blick" },
+  { src: logo19, alt: "", title: "Blick" },
+  { src: logo20, alt: "", title: "Blick" },
+  { src: logo21, alt: "", title: "Blick" },
+  { src: logo22, alt: "", title: "Blick" },
+  { src: logo23, alt: "", title: "Blick" },
+  { src: logo24, alt: "", title: "Blick" },
+  { src: logo25, alt: "", title: "Blick" },
+  { src: logo26, alt: "", title: "Blick" },
+  { src: logo27, alt: "", title: "Blick" },
+  { src: logo28, alt: "", title: "Blick" },
+  { src: logo29, alt: "", title: "Blick" },
+];
+
+const { title = "" } = Astro.props;
+---
+
+<div class="bg-white py-12">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        Supporters
+      </h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+        RRPMV is provided free of charge to participants, and we rely on grants, sponsorships and individual donations to fund our program. Please consider making a one-time or ongoing contribution through PayPal or by contacting us.
+      </p>
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-4">
+        Contributors
+      </h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+        We want to thank all of our fellow organizations for their support and donations that allow Artists for the Humanities operate. We especially want to give thanks to our most recent contribution from Cellcom, the wireless cellphone provider for Wisconsin and Michigan.
+      </p>
+    </div>
+    <ul
+      role="list"
+      class="mx-auto mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6"
+    >
+      {
+        images.map((image) => (
+          <li>
+            <Image
+              aria-hidden="true"
+              src={image.src}
+              alt={image.alt}
+              class="mx-auto h-24 w-24 aspect-square object-contain"
+            />
+            <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
+              {image.title}
+            </h3>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

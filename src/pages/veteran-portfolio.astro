@@ -56,14 +56,14 @@ const images = [
 <Layout title="Welcome to Astro.">
 	<main class="grid grid-flow-row px-4 mx-auto w-full xl:max-w-screen-2xl">
 		<ImageContentBlock order='lg:order-last' title='Photographic Portraits of Residents at Vets Place Central in Milwaukee'>
-			<Image slot="image" src={vetPortrait22} alt="" class="object-cover rounded-3xl shadow-2xl" />
+			<Image loading="eager" slot="image" src={vetPortrait22} alt="" class="object-cover rounded-3xl shadow-2xl" />
 			<p>In addition to being the executive director of Artists for the Humanities, Tim Mayer is also a professional photographer. For the last several years he has been chronicling the plight of our homeless veterans through a photographic portrait project which he hopes to turn into an exhibit that will focus attention on the many challenges our homeless veterans must deal with both here in Wisconsin and throughout the United States. Tim’s portraits of homeless veterans are both dignified and respectful. It is the same approach he takes, dignity and respect, with veterans in the art therapy, mental health guidance, and life skills program that Artists for the Humanities have been conducting for the last fourteen (14) years. The participating veterans who are homeless and/or suffer from PTSD and/or substance abuse appreciate his approach. The art therapy program has served over 5,250 veterans in Wisconsin since 2009.</p>
 		</ImageContentBlock>
-		<div class="container aspect-video swiper-container text-black my-8">
+		<div aria-hidden="true" class="container aspect-video swiper-container text-black my-8">
 			<div class="swiper main mb-4">
 				<div class="swiper-wrapper aspect-video">
 					{images.map((image) => (
-						<div class="swiper-slide"><Image src={image.src} alt={image.alt} class="h-[inherit] object-contain" /></div>
+						<div class="swiper-slide"><Image aria-hidden="true" src={image.src} alt={image.alt} class="h-[inherit] object-contain" /></div>
 					))}
 				</div>
 				<div class="swiper-button-prev"></div>
@@ -72,7 +72,7 @@ const images = [
 			<div class="swiper thumbs">
 				<div class="swiper-wrapper">
 					{images.map((image) => (
-						<div class="swiper-slide"><Image src={image.src} alt={image.alt} width={100} height={100} class="object-cover aspect-square" /></div>
+						<div class="swiper-slide"><Image aria-hidden="true" src={image.src} alt={image.alt} width={100} height={100} class="object-cover aspect-square" /></div>
 					))}
 				</div>
 			</div>

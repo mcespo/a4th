@@ -1,13 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GridWithImages from '../components/GridWithImages.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main class="grid grid-flow-row px-4 mx-auto w-full xl:max-w-screen-2xl">
-		<h1>Welcome to <span class="text-gradient">RETURN AND RECOVERY</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+		<GridWithImages />
 	</main>
 </Layout>

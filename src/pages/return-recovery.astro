@@ -13,7 +13,7 @@ import CenterContent from "../components/CenterContent.astro";
 <Layout title="Welcome to Astro.">
   <main class="grid grid-flow-row px-4 mx-auto w-full xl:max-w-screen-2xl">
     <LargeImageContentBlock order='lg:order-first' title='Return & Recovery Program for Military Veterans'>
-      <Image slot="image" src={portrait} alt="" class="absolute inset-0 h-full w-full bg-gray-50 object-cover" />
+      <Image loading="eager" slot="image" src={portrait} alt="" class="absolute inset-0 h-full w-full bg-gray-50 object-cover" />
       <p>Artists for the Humanities made the decision to suspend for the duration of the pandemic this very successful veterans program. The program has served over 4,500 veterans from March 2009 to March  2020.  The program has supported veterans throughout the state of Wisconsin – from St. Norbert Abbey in De Pere where our program started to the  Tomah VA Medical Center in Tomah WI.,  to Union Grove, Milwaukee, and Chippewa Falls.  A4TH and, the Return & Recovery Program for Military Veterans have had a positive impact on the lives of the military veterans that we served.   A4TH will re-assess the re-start of this program when the pandemic has subsided and the participating organizations and locations are able to again host the group sessions associated with this program. A4TH wishes to thank all of our funders, volunteers, and especially the veterans and their families that we served.</p>
     </LargeImageContentBlock>
     <ImageContentBlock order='lg:order-last' title='Cost Free Service'>
