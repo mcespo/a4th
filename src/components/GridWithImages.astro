@@ -1,8 +1,4 @@
 ---
-interface Props {
-  title: string;
-}
-
 import { Image } from "astro:assets";
 import logo01 from "../assets/supporter-logos/supporter-logo-1.png";
 import logo02 from "../assets/supporter-logos/supporter-logo-2.jpg";
@@ -66,7 +62,6 @@ const images = [
   { src: logo29, alt: "", title: "Blick" },
 ];
 
-const { title = "" } = Astro.props;
 ---
 
 <div class="bg-white py-12">
