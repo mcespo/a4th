@@ -1,5 +1,6 @@
 ---
 import LargeImageContentBlock from "../components/LargeImageContentBlock.astro";
+import Hero from '../components/Hero.astro';
 import ImageContentBlock from "../components/ImageContentBlock.astro";
 import Layout from "../layouts/Layout.astro";
 import { Image } from 'astro:assets';
@@ -10,7 +11,8 @@ import serve from '../assets/DSCF5303-copy.jpg';
 import CenterContent from "../components/CenterContent.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Return & Recovery">
+  <Hero title="Return & Recovery" />
   <main class="grid grid-flow-row px-4 mx-auto w-full xl:max-w-screen-2xl">
     <LargeImageContentBlock order='lg:order-first' title='Return & Recovery Program for Military Veterans'>
       <Image loading="eager" slot="image" src={portrait} alt="" class="absolute inset-0 h-full w-full bg-gray-50 object-cover" />

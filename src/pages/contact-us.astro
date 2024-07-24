@@ -1,13 +1,122 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+
+const team = [
+	{ name: 'Tim Mayer', position: 'President and Executive Director', bio: 'Program Facilitator Artists for the Humanities. Owner Timothy Mayer Artworks LLC. He is actively involved in every aspect of A4THs’ operation including facilitating all expressive art sessions throughout the state of Wisconsin.'},
+  { name: 'George Kamps', position: 'Vice President', bio: 'Psychotherapist (retired) LCSW. George Kamps is a US Navy veteran with 40 years of experience as a clinical social worker. He has been a volunteer with A4TH since 2009 and currently serves as Vice President on the Board of Directors.'},
+	{ name: 'James C. Hubbard', position: 'Secretary/Treasurer', bio: 'Chief-of Staff Mercury Marine (retired) of Fond du Lac, WI. Now lives in Valparaiso, IN. Volunteer and supporter of A4TH since 2005.'},
+	{ name: 'Rick Chrabaszewski', position: 'Board Member', bio: 'System Analyst Ph.D. CRSP (Center for Research of Security  Prices) The University of Chicago. Rick Chrabaszewski has been a contributor and served on the Board of Directors since inception. He has also served as Vice President and Treasurer. He advises Artists for the Humanities on matters of accounting, finance, and technology.'},
+	{ name: 'Rollie Stephenson', position: 'Advisor to the Board', bio: 'CEO Faith Technologies (retired).'},
+	{ name: 'Jackie Dunn', position: 'Advisor to the Board', bio: 'Hjortness CPA’s.'},
+	{ name: 'Genaro Cardaropoli', position: 'Advisor to the Board', bio: 'Hjortness CPA’s.'},
+]
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="grid grid-flow-row px-4 mx-auto w-full xl:max-w-screen-2xl">
-		<h1>Welcome to <span class="text-gradient">RETURN AND RECOVERY</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-	</main>
+  <Hero title="Contact Us" />
+  <main class="grid grid-flow-row px-4 mx-auto w-full xl:max-w-screen-2xl">
+    <div class="bg-white py-24 md:py-32">
+      <div
+        class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-5"
+      >
+        <div class="max-w-2xl xl:col-span-2 grid grid-flow-row h-fit gap-y-4">
+          <h2
+            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            Artists for the Humanities
+          </h2>
+          <iframe class="aspect-video w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2857.0504492098057!2d-88.3974484!3d44.26778169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8803b0d3ce7268cd%3A0x6517d589d1f3241a!2s621%20N%20Lawe%20St%2C%20Appleton%2C%20WI%2054911!5e0!3m2!1sen!2sus!4v1721277778835!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p>621 N Lawe St<br> Appleton, WI 54911</p>
+          <a href="tel:+9209155595">(920) 915-5595</a>
+		      <a href="mailto:tim.mayer@artistsforthehumanities.org" target="_blank">tim.mayer@artistsforthehumanities.org</a>
+        </div>
+        <ul
+          role="list"
+          class="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3"
+        >
+        {
+          team.map((member) => (
+          <li class="flex flex-col gap-10 pt-12 sm:flex-row">
+             {/* <img
+              class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+              alt=""
+            /> */}
+            <div class="max-w-xl flex-auto">
+              <h3
+                class="text-lg font-semibold leading-8 tracking-tight text-gray-900"
+              >
+                {member.name}
+              </h3>
+              <p class="text-base leading-7 text-gray-600">{member.position}</p>
+              <p class="mt-6 text-base leading-7 text-gray-600">
+                {member.bio}
+              </p>
+            </div>
+          </li>
+          ))
+        }
+        </ul>
+      </div>
+    </div>
+
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="sm:flex sm:items-center">
+        <div class="sm:flex-auto">
+          <h1 class="text-base font-semibold leading-6 text-gray-900">Meeting Minutes, Sessions</h1>
+        </div>
+      </div>
+      <div class="-mx-4 my-10 ring-1 ring-gray-300 sm:mx-0 sm:rounded-lg">
+
+        <table class="min-w-full divide-y divide-gray-300">
+          <thead>
+            <tr>
+              <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Document</th>
+              <th scope="col" class="sr-only">Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="relative py-4 pl-4 pr-3 text-sm sm:pl-6">
+                <div class="font-medium text-gray-900">09-19-2020</div>
+              </td>
+              <td class="relative py-3.5 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                <a class="inline-flex items-center rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white">Download</button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td class="relative py-4 pl-4 pr-3 text-sm sm:pl-6">
+                <div class="font-medium text-gray-900">09-19-2020</div>
+              </td>
+              <td class="relative py-3.5 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                <a class="inline-flex items-center rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white">Download</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="relative py-4 pl-4 pr-3 text-sm sm:pl-6">
+                <div class="font-medium text-gray-900">09-19-2020</div>
+              </td>
+              <td class="relative py-3.5 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                <a class="inline-flex items-center rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white">Download</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="relative py-4 pl-4 pr-3 text-sm sm:pl-6">
+                <div class="font-medium text-gray-900">09-19-2020</div>
+              </td>
+              <td class="relative py-3.5 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                <a class="inline-flex items-center rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white">Download</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+  </main>
 </Layout>

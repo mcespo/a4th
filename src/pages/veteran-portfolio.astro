@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 import { Image } from 'astro:assets';
 import vetPortrait01 from '../assets/albums/veteran-portfolio-portrait-1.jpg';
 import vetPortrait02 from '../assets/albums/veteran-portfolio-portrait-2.jpg';
@@ -53,7 +54,8 @@ const images = [
 ]
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Veteran Portraits">
+	<Hero title="Veteran Portraits" />
 	<main class="grid grid-flow-row px-4 mx-auto w-full xl:max-w-screen-2xl">
 		<ImageContentBlock order='lg:order-last' title='Photographic Portraits of Residents at Vets Place Central in Milwaukee'>
 			<Image loading="eager" slot="image" src={vetPortrait22} alt="" class="object-cover rounded-3xl shadow-2xl" />
